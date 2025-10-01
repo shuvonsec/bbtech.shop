@@ -1,0 +1,59 @@
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #0f172a;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+}
+
+.options {
+  max-width: 480px;
+  margin: 48px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.status {
+  margin-left: 12px;
+  font-size: 13px;
+  color: #2563eb;
+}
+
+.hint {
+  font-size: 12px;
+  color: #64748b;
+}

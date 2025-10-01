@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bbtech Price Scout Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="options">
+      <h1>API configuration</h1>
+      <p>Store the SerpAPI key used for Google Shopping results.</p>
+      <form id="api-form">
+        <label for="serpapi-key">SerpAPI key</label>
+        <input type="password" id="serpapi-key" placeholder="serp_api_key" />
+        <p class="hint">
+          Keys are kept in Chrome sync storage. Leave blank to use the shared SerpAPI key.
+        </p>
+        <button type="submit">Save</button>
+        <span id="status" class="status"></span>
+      </form>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
