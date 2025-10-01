@@ -112,9 +112,20 @@ async function runSearch() {
   const providers = getSelectedProviders();
 
   try {
-    const response = await chrome.runtime.sendMessage({
-      type: "FETCH_PRICES",
-      payload: { query, providers, sortBy },
+    const response = await new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage(
+        {
+          type: "FETCH_PRICES",
+          payload: { query, providers, sortBy },
+        },
+        (messageResponse) => {
+          if (chrome.runtime.lastError) {
+            reject(new Error(chrome.runtime.lastError.message));
+            return;
+          }
+          resolve(messageResponse);
+        }
+      );
     });
 
     if (!response) {
