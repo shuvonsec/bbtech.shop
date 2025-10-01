@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bbtech Competitor Price Scout</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <h1>Competitor Price Scout</h1>
+        <p class="subtitle">Track Malaysia laptop prices</p>
+      </header>
+      <section class="search">
+        <label for="query">Laptop model or title</label>
+        <input type="text" id="query" placeholder="e.g. Dell Latitude 7490" />
+      </section>
+      <section class="providers">
+        <h2>Data sources</h2>
+        <label>
+          <input type="checkbox" value="serpapi" checked disabled />
+          Google Shopping (SerpAPI)
+          <span class="tag stable">stable</span>
+        </label>
+        <label>
+          <input type="checkbox" value="shopee" />
+          Shopee
+          <span class="tag experimental">experimental</span>
+        </label>
+        <label>
+          <input type="checkbox" value="lazada" />
+          Lazada
+          <span class="tag experimental">experimental</span>
+        </label>
+        <label>
+          <input type="checkbox" value="tiktok" />
+          TikTok Shop
+          <span class="tag experimental">experimental</span>
+        </label>
+      </section>
+      <section class="sort">
+        <label for="sort">Sort results</label>
+        <select id="sort">
+          <option value="relevance">Relevance</option>
+          <option value="price">Price (MYR)</option>
+        </select>
+      </section>
+      <section class="actions">
+        <button id="search">Search</button>
+        <button id="export" disabled>Export CSV</button>
+      </section>
+      <section class="status" id="status"></section>
+      <section class="results" id="results"></section>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

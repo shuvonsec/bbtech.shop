@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "bbtech Competitor Price Scout",
+  "description": "Search competitor laptop prices in Malaysia across Google Shopping, Shopee, Lazada, and TikTok Shop.",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://serpapi.com/*",
+    "https://shopee.com.my/*",
+    "https://*.shopee.com.my/*",
+    "https://www.lazada.com.my/*",
+    "https://api.m.lazada.com/*",
+    "https://*.tiktok.com/*",
+    "https://*.tiktokcdn.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
