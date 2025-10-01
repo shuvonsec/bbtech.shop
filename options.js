@@ -1,14 +1,23 @@
 import { DEFAULT_SERPAPI_KEY, resolveSerpApiKey } from "./config/defaults.js";
 
+const MASKED_SHARED_KEY = `${DEFAULT_SERPAPI_KEY.slice(0, 6)}…${DEFAULT_SERPAPI_KEY.slice(-4)}`;
+
 const form = document.getElementById("api-form");
 const keyInput = document.getElementById("serpapi-key");
 const status = document.getElementById("status");
 
-keyInput.placeholder = DEFAULT_SERPAPI_KEY;
+keyInput.placeholder = MASKED_SHARED_KEY;
 
 async function loadKey() {
   const stored = await chrome.storage.sync.get(["serpApiKey"]);
-  keyInput.value = resolveSerpApiKey(stored.serpApiKey);
+  const resolved = resolveSerpApiKey(stored.serpApiKey);
+
+  if (!stored.serpApiKey || stored.serpApiKey.trim().length === 0) {
+    keyInput.value = "";
+    return;
+  }
+
+  keyInput.value = resolved;
 }
 
 form.addEventListener("submit", async (event) => {

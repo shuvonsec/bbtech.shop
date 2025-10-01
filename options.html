@@ -12,9 +12,10 @@
       <p>Store the SerpAPI key used for Google Shopping results.</p>
       <form id="api-form">
         <label for="serpapi-key">SerpAPI key</label>
-        <input type="password" id="serpapi-key" placeholder="serp_api_key" />
+        <input type="password" id="serpapi-key" placeholder="Shared key loaded by default" />
         <p class="hint">
-          Keys are kept in Chrome sync storage. Leave blank to use the shared SerpAPI key.
+          Keys are kept in Chrome sync storage. Leave blank to fall back to the shared SerpAPI key (masked in the
+          placeholder).
         </p>
         <button type="submit">Save</button>
         <span id="status" class="status"></span>

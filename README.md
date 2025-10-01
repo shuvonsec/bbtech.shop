@@ -35,12 +35,12 @@ All scripts are ES modules to remain MV3 compatible.
 
 ## Setup
 
-1. Use the shared SerpAPI key `e4c7b575df2d22e8cb31d4a3ae6cb807a4159c869af0f3396c2b15c68a0b599c` (preloaded in the options page) or generate your own key with Google Shopping enabled.
+1. Use the shared SerpAPI key `e4c7b575df2d22e8cb31d4a3ae6cb807a4159c869af0f3396c2b15c68a0b599c` (the options page masks it by default) or generate your own key with Google Shopping enabled.
 2. Load the extension:
    - `chrome://extensions`
    - Enable **Developer mode**
    - **Load unpacked** → select this repository folder
-3. Open the extension options page and confirm the SerpAPI key (leave blank to keep the shared key or override with your own).
+3. Open the extension options page and paste your SerpAPI key if you want to override the shared default (leave the field blank to keep the shared key—its masked value is shown as the placeholder).
 4. Pin the extension for quick access.
 
 ## Usage
