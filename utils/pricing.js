@@ -17,9 +17,9 @@ const CURRENCY_SYMBOLS = {
   AUD: "AUD",
   A$: "AUD",
   EUR: "EUR",
-  €: "EUR",
+  "\u20AC": "EUR",
   GBP: "GBP",
-  £: "GBP",
+  "\u00A3": "GBP",
 };
 
 export function parsePrice(input) {
@@ -41,7 +41,7 @@ export function normalizeCurrency({ amount, currency }) {
   if (!fxRate) {
     return null;
   }
-  return Number((amount * (FX_TABLE.MYR / fxRate)).toFixed(2));
+  return Number((amount * fxRate).toFixed(2));
 }
 
 export function formatPrice(amount, currency = "MYR") {
