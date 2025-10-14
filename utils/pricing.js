@@ -41,7 +41,7 @@ export function normalizeCurrency({ amount, currency }) {
   if (!fxRate) {
     return null;
   }
-  return Number((amount * (FX_TABLE.MYR / fxRate)).toFixed(2));
+  return Number((amount * fxRate).toFixed(2));
 }
 
 export function formatPrice(amount, currency = "MYR") {
